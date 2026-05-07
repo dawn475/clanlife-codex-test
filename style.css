@@ -1,0 +1,72 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fefcf9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+nav {
+  background-color: #444;
+  padding: 10px;
+}
+
+nav button {
+  margin: 5px;
+  padding: 10px 15px;
+  background-color: #eee;
+  border: none;
+  cursor: pointer;
+}
+
+nav button:hover {
+  background-color: #ddd;
+}
+
+#auth-container, #game-container {
+  padding: 20px;
+}
+
+img#cat-sprite {
+  width: 200px;
+  height: auto;
+  margin-top: 10px;
+}
+
+.tab {
+  margin-top: 20px;
+}
+.den {
+  border: 1px solid #888;
+  background-color: #f5f5f5;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.den h4 {
+  margin: 0;
+  font-size: 18px;
+  color: #444;
+}
+
+.den-content {
+  margin-top: 8px;
+  padding-left: 10px;
+}
+
+.cat-card {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px;
+  background: #1e1e1e;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+}
+
+.cat-card img {
+  width: 100px;
+  height: auto;
+}
