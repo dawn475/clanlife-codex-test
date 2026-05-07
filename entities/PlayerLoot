@@ -1,0 +1,50 @@
+{
+  "name": "PlayerLoot",
+  "type": "object",
+  "properties": {
+    "owner_id": {
+      "type": "string"
+    },
+    "item_key": {
+      "type": "string"
+    },
+    "item_name": {
+      "type": "string"
+    },
+    "item_type": {
+      "type": "string",
+      "enum": [
+        "prey",
+        "herb",
+        "crafting_material",
+        "collectable"
+      ],
+      "default": "crafting_material"
+    },
+    "quantity": {
+      "type": "number",
+      "default": 1
+    },
+    "rarity": {
+      "type": "string",
+      "enum": [
+        "common",
+        "uncommon",
+        "rare",
+        "legendary"
+      ],
+      "default": "common"
+    },
+    "icon": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "owner_id",
+    "item_key",
+    "item_name"
+  ]
+}

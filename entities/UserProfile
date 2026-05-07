@@ -1,0 +1,35 @@
+{
+  "name": "UserProfile",
+  "type": "object",
+  "properties": {
+    "user_id": {
+      "type": "string",
+      "description": "Base44 user ID"
+    },
+    "acorns": {
+      "type": "number",
+      "default": 100,
+      "description": "Common in-game currency earned through play"
+    },
+    "moonstones": {
+      "type": "number",
+      "default": 0,
+      "description": "Premium currency obtained through purchase"
+    },
+    "last_daily_claim": {
+      "type": "string",
+      "description": "ISO date of last daily acorn claim"
+    },
+    "total_patrols": {
+      "type": "number",
+      "default": 0
+    },
+    "total_kits_born": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "required": [
+    "user_id"
+  ]
+}

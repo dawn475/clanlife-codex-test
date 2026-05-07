@@ -1,0 +1,77 @@
+{
+  "name": "Clan",
+  "type": "object",
+  "properties": {
+    "owner_id": {
+      "type": "string",
+      "description": "User ID of the clan owner"
+    },
+    "name": {
+      "type": "string"
+    },
+    "motto": {
+      "type": "string"
+    },
+    "territory": {
+      "type": "string",
+      "enum": [
+        "forest",
+        "river",
+        "moor",
+        "pine",
+        "marsh",
+        "mountain"
+      ],
+      "default": "forest"
+    },
+    "prey_stock": {
+      "type": "number",
+      "default": 20
+    },
+    "herbs_stock": {
+      "type": "number",
+      "default": 10
+    },
+    "reputation": {
+      "type": "number",
+      "default": 50
+    },
+    "moon": {
+      "type": "number",
+      "default": 1
+    },
+    "current_weather": {
+      "type": "string",
+      "default": "clear",
+      "description": "Current weather condition"
+    },
+    "season": {
+      "type": "string",
+      "enum": [
+        "newleaf",
+        "greenleaf",
+        "leaffall",
+        "leafbare"
+      ],
+      "default": "newleaf"
+    },
+    "territory_size": {
+      "type": "number",
+      "default": 1,
+      "description": "Number of territory tiles owned. Each tile = 4 cat slots. Starts at 1 (10 base slots)."
+    },
+    "territory_wins": {
+      "type": "number",
+      "default": 0,
+      "description": "Total territory wins via raids. Capped at 15."
+    },
+    "last_raid_time": {
+      "type": "string",
+      "description": "ISO timestamp of last raid attempt (win or loss)"
+    }
+  },
+  "required": [
+    "name",
+    "owner_id"
+  ]
+}

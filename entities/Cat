@@ -1,0 +1,247 @@
+{
+  "name": "Cat",
+  "type": "object",
+  "properties": {
+    "clan_id": {
+      "type": "string"
+    },
+    "owner_id": {
+      "type": "string",
+      "description": "User ID of the clan owner"
+    },
+    "prefix": {
+      "type": "string"
+    },
+    "suffix": {
+      "type": "string"
+    },
+    "gender": {
+      "type": "string",
+      "enum": [
+        "tom",
+        "she-cat"
+      ]
+    },
+    "age_moons": {
+      "type": "number",
+      "default": 12
+    },
+    "rank": {
+      "type": "string",
+      "enum": [
+        "leader",
+        "deputy",
+        "medicine_cat",
+        "warrior",
+        "apprentice",
+        "elder",
+        "queen",
+        "kit"
+      ],
+      "default": "warrior"
+    },
+    "pelt_color": {
+      "type": "string",
+      "enum": [
+        "black",
+        "white",
+        "ginger",
+        "brown",
+        "gray",
+        "cream",
+        "calico",
+        "tortoiseshell",
+        "silver",
+        "golden"
+      ],
+      "default": "brown"
+    },
+    "pelt_pattern": {
+      "type": "string",
+      "enum": [
+        "solid",
+        "tabby",
+        "spotted",
+        "ticked",
+        "bicolor",
+        "colorpoint"
+      ],
+      "default": "solid"
+    },
+    "eye_color": {
+      "type": "string",
+      "enum": [
+        "amber",
+        "blue",
+        "green",
+        "yellow",
+        "hazel",
+        "copper",
+        "odd"
+      ],
+      "default": "amber"
+    },
+    "base_gene": {
+      "type": "string",
+      "enum": [
+        "black",
+        "chocolate",
+        "cinnamon",
+        "blue",
+        "lilac",
+        "fawn",
+        "red",
+        "cream",
+        "white",
+        "golden_tabby"
+      ],
+      "default": "black",
+      "description": "Underlying genetic base color"
+    },
+    "marking": {
+      "type": "string",
+      "enum": [
+        "none",
+        "classic_tabby",
+        "mackerel_tabby",
+        "ticked_tabby",
+        "spotted",
+        "rosetted",
+        "bicolor",
+        "harlequin",
+        "van",
+        "colorpoint",
+        "mink",
+        "sepia",
+        "smoke",
+        "shaded",
+        "shell",
+        "glitter",
+        "ghost_tabby",
+        "clouded",
+        "void",
+        "celestial",
+        "aurora"
+      ],
+      "default": "none",
+      "description": "Special markings on the cat"
+    },
+    "marking_rarity": {
+      "type": "string",
+      "enum": [
+        "common",
+        "uncommon",
+        "rare",
+        "legendary"
+      ],
+      "default": "common"
+    },
+    "trait": {
+      "type": "string",
+      "enum": [
+        "brave",
+        "loyal",
+        "cunning",
+        "gentle",
+        "fierce",
+        "ambitious",
+        "calm",
+        "playful",
+        "stubborn",
+        "wise"
+      ],
+      "default": "brave"
+    },
+    "skill_hunting": {
+      "type": "number",
+      "default": 3
+    },
+    "skill_fighting": {
+      "type": "number",
+      "default": 3
+    },
+    "skill_healing": {
+      "type": "number",
+      "default": 1
+    },
+    "health": {
+      "type": "number",
+      "default": 100
+    },
+    "happiness": {
+      "type": "number",
+      "default": 80
+    },
+    "hunger": {
+      "type": "number",
+      "default": 80,
+      "description": "Hunger level 0\u2013100, 100 = full"
+    },
+    "mood": {
+      "type": "string",
+      "enum": [
+        "joyful",
+        "content",
+        "neutral",
+        "grumpy",
+        "miserable"
+      ],
+      "default": "content",
+      "description": "Current emotional mood"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "healthy",
+        "injured",
+        "sick",
+        "expecting",
+        "nursing",
+        "dead"
+      ],
+      "default": "healthy"
+    },
+    "parent1_id": {
+      "type": "string"
+    },
+    "parent2_id": {
+      "type": "string"
+    },
+    "mate_id": {
+      "type": "string"
+    },
+    "is_alive": {
+      "type": "boolean",
+      "default": true
+    },
+    "origin": {
+      "type": "string",
+      "enum": [
+        "clanborn",
+        "loner",
+        "kittypet",
+        "rogue",
+        "other_clan"
+      ],
+      "default": "clanborn"
+    },
+    "backstory": {
+      "type": "string"
+    },
+    "leader_exp": {
+      "type": "number",
+      "default": 0,
+      "description": "Experience points \u2014 leaders only"
+    },
+    "leader_level": {
+      "type": "number",
+      "default": 1,
+      "description": "Level 1\u201310 \u2014 leaders only"
+    }
+  },
+  "required": [
+    "prefix",
+    "suffix",
+    "clan_id"
+  ]
+}

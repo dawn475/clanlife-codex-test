@@ -1,0 +1,43 @@
+{
+  "name": "InventoryItem",
+  "type": "object",
+  "properties": {
+    "owner_id": {
+      "type": "string",
+      "description": "User ID who owns this item"
+    },
+    "item_key": {
+      "type": "string",
+      "description": "Unique key matching SHOP_ITEMS"
+    },
+    "item_name": {
+      "type": "string"
+    },
+    "item_type": {
+      "type": "string",
+      "enum": [
+        "healing",
+        "boost",
+        "cosmetic",
+        "breeding",
+        "special"
+      ],
+      "default": "healing"
+    },
+    "quantity": {
+      "type": "number",
+      "default": 1
+    },
+    "description": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "owner_id",
+    "item_key",
+    "item_name"
+  ]
+}

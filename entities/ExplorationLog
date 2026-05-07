@@ -1,0 +1,50 @@
+{
+  "name": "ExplorationLog",
+  "type": "object",
+  "properties": {
+    "clan_id": {
+      "type": "string"
+    },
+    "cat_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "IDs of cats sent on this exploration"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "hunting",
+        "border_patrol",
+        "herb_gathering",
+        "adventure"
+      ],
+      "default": "hunting"
+    },
+    "outcome": {
+      "type": "string",
+      "description": "What happened during the exploration"
+    },
+    "prey_gained": {
+      "type": "number",
+      "default": 0
+    },
+    "herbs_gained": {
+      "type": "number",
+      "default": 0
+    },
+    "cats_encountered": {
+      "type": "string",
+      "description": "Description of any cats encountered"
+    },
+    "moon": {
+      "type": "number",
+      "description": "Which moon this happened on"
+    }
+  },
+  "required": [
+    "clan_id",
+    "type"
+  ]
+}
